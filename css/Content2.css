@@ -1,0 +1,314 @@
+@font-face{
+    font-family: 'Grenze';
+    src: url(fonts/Grenze-Medium.ttf);
+}
+
+
+/* Grid Layout */
+.grid-container
+{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    display: grid;
+    grid-gap: 0;
+    overflow-wrap: break-word;
+    /*background-color: rgb(0, 2, 36);*/
+    height: 1vh;
+}
+.box
+{
+    background-color: rgb(122, 113, 59);
+    box-sizing: border-box;
+    margin: auto;
+    font-family: 'Grenze', serif;
+
+}
+
+
+
+
+/* Grid Rows and Columns */
+.header
+{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.nav
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.information
+{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.activities
+{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.footer
+{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+
+
+/* Body Styles */
+
+html
+{
+    margin: auto;
+    background-color: black;
+}
+
+body
+{
+    margin: auto;
+    position: relative;
+    min-width: 860px;
+    max-width: 2760px;
+}
+body::after
+{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+
+/* Header Styles */
+
+header
+{
+    background: url(../images/PhoenixNightAbove.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    height: 150px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    float: center;
+}
+
+header > h1
+{
+    position: relative;
+    color: white;
+    font-size: 6em;
+    margin-left: 30%;
+    top: -60px;
+    text-align: center;
+}
+
+
+
+/* Nav Styles */
+
+.nav
+{
+    display: block;
+    background: url(../images/RockBackground.png);
+    background-size: 400px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: white 5px 5px 15px;
+    z-index: 5;
+}
+.nav > ul
+{
+    display: block;
+    color:rgb(255, 255, 255);
+    position: relative;
+    z-index: 10;
+}
+.nav > ul > li
+{
+
+   display: block;
+   float: left;
+   position: relative;
+   margin: 0px 100px 0px 0px;
+   padding: 25px 0px 25px 0px;
+}
+.nav > ul > li > a
+{
+   font-size: 1.5em;
+    text-decoration: none;
+    padding: 15px 10px 15px 10px;
+    border-radius: 100px;
+    transition: 0.175s;
+    color: white;
+    display: block;
+}
+.nav > ul > li > a:hover
+{
+    color: rgba(255, 230, 0, 0.863);
+    background-color: #462500e8;
+    transition: 0.175s;
+    border-radius: 0px 50px 0px 50px;
+
+    margin: 0px 0px 0px 0px;
+}
+.nav > ul > li > a:active
+{
+   color: rgb(19, 114, 0);
+   background-color: rgb(150, 67, 0);
+    font-weight: bold;
+}
+
+
+/* Information Section Styles */
+.information
+{
+    height: 1000px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    float: center;
+    display: block;
+    background-color: rgb(73, 15, 0);
+    z-index: 2;
+    font-size: 125%;
+}
+
+.information > .section
+{
+    width: 95%;
+    height: 100%;
+    background-color: rgb(94, 61, 0);
+    z-index: 1;
+    margin: auto;
+    position: relative;
+    box-shadow: rgb(73, 15, 0) 0 0 150px inset; 
+    display: grid;
+    
+}
+
+.information > .section > .article
+{
+    width: 95%;
+    margin: auto;
+    height: 400px;
+    position: relative;
+    overflow: auto;
+    border: black solid 2px;
+}
+
+.information > .section > .images
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+}
+
+.information > .section > .images > img
+{
+    display: block;
+    border: solid black 4px;
+    width: 25%;
+    margin: 5px;
+}
+
+.information > .section > a
+{
+    width: 170px;
+    margin: auto;
+}
+
+.information > .section > h2
+{
+    padding-top: 20px;
+    color: rgb(0, 43, 0);
+    text-align: center;
+    font-size: 2em;
+}
+
+.information > .section > a.twitter-timeline
+{
+    position: relative;
+    margin: auto;
+}
+
+.information > .section > .article > h3
+{
+    margin: 10px 30px 10px 30px;
+    color: rgb(0, 46, 8);
+    text-shadow: sandybrown 0px 3px 2px;
+}
+
+.information > .section > .article > p
+{
+    margin: 2px 40px 2px 40px;
+    font-size: 1.1em;
+    text-indent: 20px;
+}
+
+
+/* Footer */
+
+.footer
+{
+    background-color: rgb(29, 29, 29);
+    height: 220px;
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    margin: auto;
+}
+
+.footer > a
+{
+    position: relative;
+    margin-right: 24%;
+
+    display: inline-block;
+    width: 0px;
+    
+}
+
+.footer > a > figure
+{
+    display: inline-block;
+    padding: 10px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.048);
+    color: white;
+    border-radius: 100px;
+    filter: grayscale(1);
+}
+
+.footer > a > figcaption
+{
+    color: white;
+}
+
+.footer > a > figure:hover
+{
+    transition: 0.05s;
+    transform: scale(1.1);
+
+}
+
+footer > p
+{
+    color: white;
+}
